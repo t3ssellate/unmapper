@@ -21,14 +21,14 @@ void fix_alignment(PeFile* _pe)
 	}
 }
 
-void fix_image_base(PeFile* _pe, unsigned long _new_base)
+void fix_image_base(PeFile* _pe, unsigned long long _new_base)
 {
 	if (auto pe32 = dynamic_cast<PeFile32*>(_pe))
 	{
 		auto& header = pe32->opt_header();
 		std::cout << "[+] Modifying base address from 0x" << std::hex
-			<< header.ImageBase << " to 0x" << _new_base << std::endl;
-		header.ImageBase = _new_base;
+			<< header.ImageBase << " to 0x" << static_cast<DWORD>(_new_base) << std::endl;
+		header.ImageBase = static_cast<DWORD>(_new_base);
 	}
 	else if (auto pe64 = dynamic_cast<PeFile64*>(_pe))
 	{
@@ -65,14 +65,14 @@ int main(int argc, char** argv)
 {
 	if (argc != 2)
 	{
-		std::cout << "Usage: unmapper.exe <dump path>";
+		std::cout << "Usage: Unmapper.exe <dump path>" << std::endl;
 		return 0;
 	}
 
 	const std::string filename{ argv[1] };
 	std::cin.exceptions(std::ios_base::failbit);
 	std::unique_ptr<PeFile> pe;
-	unsigned long new_base{ 0 };
+	unsigned long long new_base{ 0 };
 	
 	// Open file with correct bitness, create mapping + view...
 	try

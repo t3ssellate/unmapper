@@ -10,4 +10,4 @@ to load the file correctly and without errors.
 
 ## Usage
 
-`$ unmapper.exe <filename>`
+`$ Unmapper.exe <filename>`
