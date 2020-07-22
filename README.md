@@ -4,7 +4,7 @@ An automatic tool for fixing dumped PE files for decompilation. Especially usefu
 
 ## What does it do?
 
-Unmapper takes a memdump of a PE file that has been loaded to memory, a common case with malware loaders.
+Unmapper takes a memdump of a PE file that has been loaded to memory, a common case when researching malware loaders.
 It modifies the PE's headers such that a decompiler, or other static analysis tools, will be able
 to load the file correctly and without errors.
 
