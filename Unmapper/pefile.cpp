@@ -97,7 +97,7 @@ bool PeFile::is_file_valid() const noexcept
 	{
 		return false;
 	}
-	
+
 	return true;
 }
 

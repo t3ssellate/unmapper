@@ -18,7 +18,7 @@ class PeFile
 {
 public:
 	virtual ~PeFile();
-	
+
 	IMAGE_DOS_HEADER& dos_header() const;
 	IMAGE_FILE_HEADER& pe_header() const;
 	std::vector<PIMAGE_SECTION_HEADER> section_headers() const;

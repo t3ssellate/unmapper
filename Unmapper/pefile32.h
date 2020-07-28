@@ -10,7 +10,7 @@ public:
 	PeFile32() = default;
 	PeFile32(PeFile32&& _other) noexcept = default;
 	PeFile32(const PeFile32& _other) noexcept = delete;
-	
+
 	virtual std::string bitness() const final;
 	IMAGE_OPTIONAL_HEADER32& opt_header() const;
 

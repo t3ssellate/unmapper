@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6cfc66db-1907-49de-8f1f-aa26e641e045}</ProjectGuid>
+    <ProjectGuid>{47b13d5f-debe-4af6-a8c2-9e62e4c8b6c7}</ProjectGuid>
     <RootNamespace>Unmapper</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
@@ -139,15 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="pefile.h" />
-    <ClInclude Include="pefile32.h" />
-    <ClInclude Include="pefile64.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pefile.cpp" />
     <ClCompile Include="pefile32.cpp" />
     <ClCompile Include="pefile64.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pefile.h" />
+    <ClInclude Include="pefile32.h" />
+    <ClInclude Include="pefile64.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

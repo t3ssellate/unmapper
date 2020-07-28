@@ -12,7 +12,7 @@ void fix_alignment(PeFile* _pe)
 			<< " to 0x" << header.SectionAlignment << std::endl;
 		header.FileAlignment = header.SectionAlignment;
 	}
-	else if(auto pe64 = dynamic_cast<PeFile64*>(_pe))
+	else if (auto pe64 = dynamic_cast<PeFile64*>(_pe))
 	{
 		auto& header = pe64->opt_header();
 		std::cout << "[+] Modifying file alignment from 0x" << header.FileAlignment
@@ -73,12 +73,12 @@ int main(int argc, char** argv)
 	std::cin.exceptions(std::ios_base::failbit);
 	std::unique_ptr<PeFile> pe;
 	unsigned long long new_base{ 0 };
-	
+
 	// Open file with correct bitness, create mapping + view...
 	try
 	{
 		pe = std::make_unique<PeFile64>(filename);
-	} 
+	}
 	catch (const bitness_error& ex)
 	{
 		pe = std::make_unique<PeFile32>(filename);
@@ -120,7 +120,7 @@ int main(int argc, char** argv)
 	}
 
 	std::cout << "[+] Writing to file " << unmapped_filename << std::endl;
-	try 
+	try
 	{
 		pe->write_to_file(unmapped_filename);
 	}

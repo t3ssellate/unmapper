@@ -18,24 +18,24 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="pefile64.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="pefile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pefile32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="pefile64.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="pefile64.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="pefile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pefile32.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pefile64.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
